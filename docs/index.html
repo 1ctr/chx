@@ -1,1 +1,251 @@
-1
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign - chx.lol</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif; /* Alterado para Montserrat */
+        }
+
+        body {
+            /* Cor de fundo escura com suporte para imagem */
+            background: #1a1a1a url('img/abg.jpg') no-repeat center center fixed;
+            background-size: cover; /* Ajusta a imagem para cobrir o fundo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+            position: relative; /* Necessário para o efeito de fundo */
+            overflow: hidden; /* Evita barras de rolagem desnecessárias */
+        }
+
+        /* Camada de fundo com efeito blur */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px); /* Efeito de desfoque */
+            z-index: -1; /* Coloca o fundo atrás do conteúdo */
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 400px; /* Limita a largura do container para centralizar */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem; /* Logo mais para cima */
+            margin-bottom: 2rem;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+        }
+
+        .logo p {
+            font-weight: lighter;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza os elementos filhos */
+            width: 100%; /* Garante que o formulário ocupe a largura do container */
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.2rem;
+            width: 100%;
+            max-width: 350px; /* Mesma largura dos inputs */
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 8px; /* Posiciona o ícone dentro do input, no lado esquerdo */
+            top: 50%;
+            transform: translateY(-50%);
+            color: #b0b0b0;
+            font-size: 1rem;
+            background: #3a3a3a50; /* Fundo escuro para o ícone */
+            padding: 6px; /* Espaço ao redor do ícone */
+            border-radius: 6px; /* Bordas arredondadas */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Contorno igual ao dos botões e inputs */
+            line-height: 1; /* Ajusta a altura do ícone */
+            z-index: 1; /* Garante que o ícone fique acima do input */
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 0.8rem 0.8rem 3rem; /* Ajuste para o ícone no lado esquerdo */
+            background: #2a2a2a50;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda fina */
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+            position: relative;
+        }
+
+        .form-group input:focus {
+            border-color: #b0b0b0; /* Cor neutra ao focar */
+        }
+
+        .form-group input::placeholder {
+            color: #b0b0b0;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 350px; /* Mesma largura dos inputs */
+            padding: 0.8rem;
+            background: #2a2a2a50; /* Fundo escuro igual aos inputs */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Mesma borda dos inputs */
+            border-radius: 8px; /* Bordas levemente arredondadas */
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .btn:hover {
+            background: #3a3a3a; /* Leve alteração ao passar o mouse */
+            border-color: #b0b0b0; /* Cor neutra na borda ao passar o mouse */
+        }
+
+        .link {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .link a {
+            color: #80C4DE; /* Tom azul-esverdeado pastel */
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .forgot-password a {
+            color: #80C4DE; /* Tom azul-esverdeado pastel */
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Garante que os formulários mantenham o alinhamento ao alternar */
+        #login-form, #register-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="bi bi-back"></i> chx.lol
+            <p>© 2025 fSolutions</p>
+        </div>
+        <h1>Upgrade your gaming experience</h1>
+        <p>Your all-in-one gaming dashboard.</p>
+
+        <!-- Formulário de Login -->
+        <form id="login-form">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Username or Email address" required>
+            </div>
+            <div class="form-group">
+                <i class="bi bi-three-dots"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">LOGIN</button>
+            <div class="forgot-password">
+                Forgot it? <a href="#">Request a reset</a>.
+            </div>
+            <div class="link">
+                Don't have an account? <a href="#register" onclick="showRegister()">Register here</a>.
+            </div>
+        </form>
+
+        <!-- Formulário de Registro (oculto inicialmente) -->
+        <form id="register-form" style="display: none;">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <i class="bi bi-at"></i>
+                <input type="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+                <i class="bi bi-three-dots"></i>
+                <input type="password" placeholder="Password (at least 8 characters)" required>
+            </div>
+            <div class="form-group">
+                <i class="bi bi-key"></i>
+                <input type="text" placeholder="Invite code or Access key" required>
+            </div>
+            <button type="submit" class="btn">REGISTER</button>
+            <div class="forgot-password">
+                Don't have a Access key? <a href="shop.html">Buy here</a>.
+            </div>
+            <div class="link">
+                Already have an account? <a href="#login" onclick="showLogin()">Login here</a>.
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'flex'; /* Usa flex para manter o alinhamento */
+        }
+
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'flex'; /* Usa flex para manter o alinhamento */
+            document.getElementById('register-form').style.display = 'none';
+        }
+    </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a5c0ab8bfb4531',t:'MTc0MzY1MzgwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
