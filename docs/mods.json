@@ -1,0 +1,16 @@
+[
+    {
+        "image": "img/chxl.jpg",
+        "title": "Chx Loader",
+        "description": "The Mods and Cheats Loader of chx.lol, with automatic installation and injection. In development.",
+        "link": "",
+        "buttonText": "MEMBERS ONLY"
+    },
+    {
+        "image": "img/anp.jpg",
+        "title": "AntiCheetahPlus",
+        "description": "Adds a new tab to the Cheetah Cheaters menu, with unlocked features. To use it you need to put it in the <a href=\"https://melonwiki.xyz\">Melon Loader</a> Mods folder.",
+        "link": "#",
+        "buttonText": "GET NOW"
+    }
+]
